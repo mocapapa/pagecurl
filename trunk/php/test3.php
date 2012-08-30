@@ -4,7 +4,7 @@
  高性能版のテーブルを式に逆置き換えで低速化
  アルゴリズム確認用
 
- test2: javaのアルゴリズムを再現, anti-aliasing有り
+ test3: javaのアルゴリズムを再現, anti-aliasing有り,端の処理有り
 
 */
 define('W', 500); // 画像幅サイズ
@@ -52,7 +52,7 @@ $K0 = W/2*cos($theta0)+H/2*sin($theta0); // $w の初期値
 
   //  print "w=$w, i=$i, theta=$theta\n";
 
-  $K = W*$cos + H*$sin; // (W/2, -H/2)をtheta回転した点のx座標＝回転系座標(u,v)	におけるuの最大値
+  $K = W/2*$cos + H/2*$sin; // (W/2, -H/2)をtheta回転した点のx座標＝回転系座標(u,v)	におけるuの最大値
   $k = 2*$w +M_PI*$R - $K; // めくった左端のu座標
 
   $time_start = getmicrotime();
