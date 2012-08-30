@@ -241,7 +241,7 @@ $K0 = W/2*cos($theta0)+H/2*sin($theta0); // $w の初期値
 	$y2 = -$u2*$sin + $v*$cos;
 
 	$coeff = $alpha + (1- $alpha)*cos(asin($p/$R));
-	if ((-W/2 <= $x3) && ($x3 <= W/2) && (-H/2 <= $y3) && ($y3 <= H/2)) {
+	if ((-W/2 <= $x3) && ($x3 < W/2) && (-H/2 <= $y3) && ($y3 < H/2)) {
 	  // area3
 	  $ix3 = $x3 + W/2;
 	  $iy3 = -$y3 + H/2 -1;
